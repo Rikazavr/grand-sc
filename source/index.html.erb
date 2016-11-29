@@ -2,12 +2,127 @@
 title: grand-sc
 ---
 
+<%= stylesheet_link_tag :form %>
+<!--================================================= Form -->
+
+      <div class="overlay"></div>
+      <div class="form-wrapper">
+        <div class="popup">
+          <div class="form-header">
+            <div class="close_modal"></div>
+            <div class="form-hor-line"></div>
+            <h2>анкета для заполнения заявки</h2>
+            <h1>в спортивный клуб SC Grand</h1>
+          </div>
+          <form id="form" class="reg-form">
+            <div class="form-row">
+              <div class="form-item">
+                <p><span class="par">1.</span> Впишите ФИО ребёнка</p>
+              </div>
+              <div class="form-item">
+                <input type="text" placeholder="ФИО ребёнка" name="childname" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-item">
+                <p><span class="par">2.</span> Возраст ребёнка</p>
+              </div>
+              <div class="form-item">
+                <input type=birthday placeholder="дд.мм.гггг" name="birthday" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-item">
+                <p><span class="par">3.</span> ФИО контактного лица (мама, папа)</p>
+              </div>
+              <div class="form-item">
+                <input type="text" placeholder="ФИО родителя" name="parentname" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-item">
+                <p><span class="par">4.</span> Ваша почта</p>
+              </div>
+              <div class="form-item">
+                <input type="text" name="email" placeholder="к примеру info@sc-grand.ru" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-item">
+                <p><span class="par">4.</span> Моб. телефон</p>
+              </div>
+              <div class="form-item">
+                <input id="username" type="tel" placeholder="+7 945 5555555" name="phone" required title="неверный формат телефона">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-item">
+                <p><span class="par">5.</span> Разряд (если есть)</p>
+              </div>
+              <div class="form-item">
+              <select class="option-list" name="rank">
+                  <option value="Нет разряда">Нет разряда</option>
+                <option value="1-й разряд">1-й юношеский спортивный разряд</option>
+                <option value="2-й разряд">2-й юношеский спортивный разряд</option>
+                <option value="3-й разряд">3-й юношеский спортивный разряд</option>
+                <option value="1-й взрослый спортивный разряд">1-й взрослый спортивный разряд</option>
+                <option value="2-й взрослый спортивный разряд">2-й взрослый спортивный разряд</option>
+                <option value="3-й возрослый спортивный разряд">3-й возрослый спортивный разряд</option>
+                <option value="КМС">КМС</option>
+              </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-item">
+                <p><span class="par">6.</span> Выберите вид спорта</p>
+              </div>
+              <div class="form-item">
+                <select id="select" class="option-list" name="sport">
+                  <option value="Художественная гимнастика">Художественная гимнастика</option>
+                  <option value="Эстетическая гимнастика">Эстетическая гимнастика</option>
+                  <option value="Хореография">Хореография</option>
+                  <option value="Стретчинг">Стретчинг</option>
+                </select>
+              </div>
+              </div>
+              <div class="form-item">
+              </div>
+            <div class="form-row">
+              <div class="form-item">
+                <p><span class="par">6.</span> Выберите район</p>
+              </div>
+              <div class="form-item">
+                <select id="select" class="option-list" name="office">
+                  <option value="Косино">Косино</option>
+                  <option value="Кожухово">Кожухово</option>
+                  <option value="Новокосино">Новокосино</option>
+                  <option value="Ивановское">Ивановское</option>
+                </select>
+              </div>
+              </div>
+              <div class="form-row">
+                <div class="form-item">
+                  <p><span class="par">7.</span> Дополнительная информация</p>
+                </div>
+                <div class="form-item">
+                  <textarea placeholder="Ваши ожидания от занятий и тд." name="additional"></textarea>
+                </div>
+              </div>
+            <div class="form-row">
+              <p>Мы свяжемся с вами в ближайшие рабочие сутки, звонки не позже 18.00</p>
+              <input type="submit" name="submit" class="btn" value="ОТПРАВИТЬ">
+              <input type="hidden" name="formData" value="Заявка с сайта sc-grand">
+            </div>    
+        </form>
+        </div>
+      </div>
+<!--================================================= Form end -->
 <div class="ribbon">
     <div class="container">
         <div class="grand">
-            <div class="open_modal">
+             <div class="open_modal">
                 <p>Заполнить анкету</p>
-            </div>
+            </div> 
         </div>
     </div>
 </div>
@@ -15,40 +130,56 @@ title: grand-sc
 <div class="container">
     <div class="index-news">
         <div class="news-item">
-            <%= image_tag "paper.png" %>
+            <img src="/images/paper.png" alt="Paper" />
             <a href="news.html">новости клуба</a>
         </div>
         <div class="news-item">
-            <p class="news-date"><span class="month">ВНИМАНИЕ! </span></p>
-            <h2>Открыт набор в секцию художественной гимнастики</h2>
+            <p class="news-date"><span class="month">Работа </span></p>
+            <h2>Открыта вакансия преподавателей и тренеров по:</h2>
+            <p>- Художественной гимнастике</p></br>
+            <p>- Эстетической гимнастике</p>
         </div>
         <div class="news-item">
-            <p class="news-date">01 <span class="month">ИЮНЯ</span></p>
-            <h2>Летние учебно-тренировочные оздоровительные сборы.</h2>
-            <p>c 06 августа по 20 августа 2016 года пройдёт програма сборов в живописном уголке г. Сергиев Посад в санатории "Буран"</p>
+            <p class="news-date">13 <span class="month">Ноя</span></p>
+            <h2>Диспансеризация!</h2>
+            <p>Гимнасткам группам ГСС, УТГ №1, УТГ №2 и ГНП (2 год)-необходимо пройти диспансеризацию 28 ноя 2016 г. в 10:00 часов и 05 дек 2016 г. в 11:00 </br>Адрес: Москва, ул.Новослободская, д. 54/56</p>
         </div>
         <div class="news-item">
-            <p class="news-date">13-14 <span class="month">ФЕВРАЛЯ</span></p>
-            <h2>ПОЗДРАВЛЯЕМ !</h2>
-            <p>Гимнасток нашего клуба, занявших призовые места в турнире турнира по художественной гимнастике “Мисс Валентинка2016”</p>
+            <p class="news-date">05 <span class="month">Ноя</span></p>
+            <h2>Зимние УТС  SC Grand</h2>
+            <p>Приглашаем гимнасток клуба принять участие в зимних спортивных сборах по художественной гимнастике! г.Дубна в период зимних каникул - с 02 по 08 января 2017 г.</p>
         </div>
         <div class="news-item">
-            <p class="news-date">14-15 <span class="month">НОЯБРЯ</span></p>
-            <h2>ПОЗДРАВЛЯЕМ !</h2>
-            <p>гимнасток нашего клуба, занявших призовые места в Межрегиональном турнире городов России и Московской области по художественной гимнастике «НАДЕЖДА»14-15 ноября 2015 г</p>
+            <p class="news-date">01 <span class="month">Ноя</span></p>
+            <h2>Открытый турнир по худ. гимнастике «Хрустальная статуэтка»</h2>
+            <p>проходил с 29 по 30 октября 2016 года на базе ФОК «Атлант-Косино» в г.Москве. </p>
         </div>
     </div>
+
+    <div class="unnamed-two">
+        <%= image_tag "images/nabor-3.jpg" %>
+    </div>
+
     <div class="ribbon-text">
     </div>
     <div class="index-about">
         <div class="index-about-left">
-            <h1>Наш клуб предлагает:</h1>
+            <h1>Наш Клуб создан профессионалами и фанатами своего дела.</h1>
             <div class="hor-line"></div>
-            <p>Основной деятельностью Клуба является организация тренировочного процесса для достижения высоких спортивных результатов, присвоения спортивных разрядов и званий  «кандидата в мастера» и «мастера спорта».</p>
+            <p>За плечами каждого тренера не только спортивная жизнь, сборы под руководством великих Мастеров, но и Спортивный ВУЗ, где были получены знания в области анатомии, физиологии, возрастной периодизации, психологии, а также многолетний опыт работы. Мы гарантируем индивидуальный подход к каждому ребенку, творческие задания и нестандартные тренировки. </p>
         </div>
         <div class="index-about-right">
-            <p>Наши специалисты развивают в девочках пластичность, грациозность, эмоциональность, ритмичность. Стройность, здоровье, красота, хорошая физическая подготовка, дисциплина, сила воли – все это дает именно гимнастика.</p>
-            <p>Приводите Вашего ребенка на занятия Художественной и Эстетической гимнастикой в наш Клуб. Подарите своему ребенку счастливое спортивное детство, массу ярких впечатлений и новых друзей!</p>
+            <h2>Если ты:</h2>
+            <ul>
+                <li>хочешь участвовать в соревнованиях и побеждать;</li>
+                <li>готов трудиться и совершенствоваться;</li>
+                <li>не боишься трудностей;</li>
+                <li>хочешь попасть в команду единомышленников </li>
+            </ul>
+            </br>
+            <p> ЖДЕМ тебя в стенах нашего Клуба.</p>
+            <p>Мы знаем вкус победы и готовы поделиться всеми знаниями и умениями для достижения цели! Мы готовы и хотим трудиться! </p>
+            <h1>Нас ждут GRANDиозные вершины!</h1>
             <a href="about.html" class="index-about-button">подробнее &#187</a>
         </div>
     </div>
@@ -63,25 +194,25 @@ title: grand-sc
             <%= image_tag "001.png" %>
             <p>художественная</p>
             <h1>гимнастика</h1>
-            <div class="registration-button">Записаться</div>
+             <div class="registration-button">Записаться</div> 
         </div>
         <div class="sections-item">
             <%= image_tag "002.png" %>
             <p>эстетическая</p>
             <h1>гимнастика</h1>
-            <div class="registration-button">Записаться</div>
+             <div class="registration-button">Записаться</div> 
         </div>
         <div class="sections-item">
             <%= image_tag "003.png" %>
             <p>постановка</p>
             <h1>упражнений</h1>
-            <!--<div class="registration-button">Записаться</div>-->
+            <div class="registration-button">Записаться</div>
         </div>
         <div class="sections-item">
             <%= image_tag "004.png" %>
             <p>гимнастическая</p>
             <h1>растяжка</h1>
-            <!--<div class="registration-button">Записаться</div>-->
+            <div class="registration-button">Записаться</div>
         </div>
         <div class="sections-item">
             <%= image_tag "005.png" %>

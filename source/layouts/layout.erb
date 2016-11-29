@@ -11,10 +11,10 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title %></title>
-
+    
+    <%= favicon_tag 'images/favicon.ico' %>
     <%= stylesheet_link_tag :site %>
     <%= stylesheet_link_tag :page %>
-    <%= stylesheet_link_tag :form %>
     <%= stylesheet_link_tag :lightgallery %>
     <%= javascript_include_tag :all %>
     
@@ -49,16 +49,16 @@
             <div class="menu-item dropdown">
               <a href="about.html">О нас</a>
               <div class="dropdown-content">
-                <%= link_to "тренеры", '/trainers.html' %>
-                <%= link_to "документы", '/documents.html' %>
-                <%= link_to "новости", '/news.html' %>
+                <%= link_to "Новости", '/news.html' %>
+                <%= link_to "Тренеры", '/trainers.html' %>
+                <%= link_to "Документы", '/documents.html' %>
               </div>
             </div>
             <div class="menu-item dropdown">
               <a href="#">Наши услуги</a>
               <div class="dropdown-content">
                 <%= link_to "Художественная гимнастика", '/gymnastics.html' %>
-                <%= link_to "Эстетическая гимнастика", '/aesthetic.html' %>
+                <%= link_to "Эстетическая </br>гимнастика", '/aesthetic.html' %>
                 <%= link_to "Постановки", '/direction.html' %>
                 <%= link_to "Стретчинг", '/stretching.html' %>
               </div>
@@ -66,18 +66,9 @@
             <div class="menu-item">
               <%= link_to "Расписание", '/scedule.html' %>
             </div>
-            <!--<div class="menu-item">-->
-            <!--  <%= link_to "Художественная гимнастика", '/gymnastics.html' %>-->
-            <!--</div>-->
-            <!--<div class="menu-item">-->
-            <!--  <%= link_to "Эстетическая гимнастика", '/aesthetic.html' %>-->
-            <!--</div>-->
-            <!--<div class="menu-item">-->
-            <!--  <%= link_to "Постановки", '/direction.html' %>-->
-            <!--</div>-->
-            <!--<div class="menu-item">-->
-            <!--  <%= link_to "Стретчинг", '/stretching.html' %>-->
-            <!--</div>-->
+            <div class="menu-item">
+              <%= link_to "Галерея", '/album_gallery.html' %>
+            </div>
             <div class="menu-item">
               <%= link_to "Попечительский совет", '/trustees.html' %>
             </div>
@@ -88,104 +79,7 @@
         </div>
       </div>
       
-<!--================================================= Form -->
 
-      <div class="overlay"></div>
-      <div class="form-wrapper">
-        <div class="popup">
-            <div class="form-header">
-                <div class="close_modal"></div>
-                <div class="form-hor-line"></div>
-                <h2>анкета для заполнения заявки</h2>
-                <h1>в спортивный клуб SC Grand</h1>
-            </div>
-            <form class="reg-form" action="">
-                <div class="form-row">
-                	<div class="form-item">
-                		<p><span class="par">1.</span> Впишите ФИО ребёнка</p>
-                	</div>
-                	<div class="form-item">
-                		<input type="text" placeholder="ФИО ребёнка" name="childname">
-                	</div>
-                </div>
-                <div class="form-row">
-                	<div class="form-item">
-                		<p><span class="par">2.</span> Возраст ребёнка</p>
-                	</div>
-                	<div class="form-item">
-                		<input type=birthday placeholder="дд.мм.гггг" name="birthday">
-                	</div>
-                </div>
-                <div class="form-row">
-                	<div class="form-item">
-                		<p><span class="par">3.</span> ФИО контактного лица (мама, папа)</p>
-                	</div>
-                	<div class="form-item">
-                		<input type="text" placeholder="ФИО родителя" name="parentname">
-                	</div>
-                </div>
-                <div class="form-row">
-                	<div class="form-item">
-                		<p><span class="par">4.</span> Моб. телефон</p>
-                	</div>
-                	<div class="form-item">
-                		<input type="tel" pattern="" placeholder="+7 945 5555555" name="phone">
-                	</div>
-                </div>
-                <div class="form-row">
-                	<div class="form-item">
-                	    <p><span class="par">5.</span> Разряд (если есть)</p>
-                	</div>
-                	<div class="form-item">
-              	    <select class="option-list" name="rank">
-            	        <option value="Нет разряда">Нет разряда</option>
-                      <option value="1-й разряд">1-й юношеский спортивный разряд</option>
-                      <option value="2-й разряд">2-й юношеский спортивный разряд</option>
-                      <option value="3-й разряд">3-й юношеский спортивный разряд</option>
-                    </select>
-                	</div>
-                </div>
-                <div class="form-row">
-                	<div class="form-item">
-                		<p><span class="par">6.</span> Выберите вид спорта</p>
-                	</div>
-                	<div class="form-item">
-                		<select id="select" class="option-list" name="sport">
-                      <option value="Художественная гимнастика">Художественная гимнастика</option>
-                      <option value="Эстетическая гимнастика">Эстетическая гимнастика</option>
-                      <option value="Хореография">Хореография</option>
-                      <option value="Стретчинг">Стретчинг</option>
-                    </select>
-                	</div>
-                </div>
-                <div class="form-row">
-                	<div class="form-item">
-                		<p><span class="par">7.</span> Дополнительная информация</p>
-                	</div>
-                	<div class="form-item">
-                		<textarea placeholder="Ваши ожидания от занятий и тд." name="additional"></textarea>
-                	</div>
-                </div>
-                <div class="form-row">
-                    <p>Мы свяжемся с вами в ближайшие рабочие сутки, звонки не позже 18.00</p>
-                    <input type="submit" class="" value="Отправить заявку" disabled="disabled" name="btnsend">
-                </div>
-            </form>
-        </div>
-        <div class="popup2">
-            <div class="form-header">
-                <div class="close_modal"></div>
-                <div class="form-hor-line"></div>
-                <h2>анкета для заполнения заявки</h2>
-                <h1>в спортивный клуб SC Grand</h1>
-            </div>
-            <div class="popup2message">
-                <p>Спасибо, ваша заявка принята!</p>
-            </div>
-        </div>
-      </div>
-
-<!--================================================= Form end -->
       
     <%= yield %>
     
@@ -193,64 +87,64 @@
       <div class="container">
         <div class="first-footer-column">
           <a href="../index.html">
-            <%= image_tag "footer-logo.png" %>
+            <img src="/images/footer-logo.png" alt="Footer logo" />
           </a>
         </div>
         <div class="second-footer-column">
           <ul class="footer-menu">
             <li>
-              <%= link_to "художественная гимнастика", '/gymnastics.html' %>
+              <a href="/gymnastics.html">художественная гимнастика</a>
             </li>
             <li>
-              <%= link_to "эстетическая гимнастика", '/aesthetic.html' %>
+              <a href="/aesthetic.html">эстетическая гимнастика</a>
             </li>
             <li>
-              <%= link_to "попечительский совет", '/trustees.html' %>
+              <a href="/trustees.html">попечительский совет</a>
             </li>
           </ul>
         </div>
         <div class="third-footer-column">
           <ul class="footer-menu">
             <li>
-              <%= link_to "новости", '/news.html' %>
+              <a href="/news.html">новости</a>
             </li>
             <li>
-              <%= link_to "постановки", '/direction.html' %>
+              <a href="/direction.html">постановки</a>
             </li>
             <li>
-              <%= link_to "стретчинг", 'stretching.html' %>
+              <a href="/stretching.html">стретчинг</a>
             </li>
           </ul>
         </div>
         <div class="fourth-footer-column">
           <ul class="footer-menu">
             <li>
-              <%= link_to "тренеры", '/trainers.html' %>
+              <a href="/trainers.html">тренеры</a>
             </li>
             <!--<li>-->
-            <!--  <%= link_to "фотогалерея", '/gallery.html' %>-->
+            <!--  <a href="/gallery.html">фотогалерея</a>-->
             <!--</li>-->
             <li>
-              <%= link_to "контакты", '/contacts.html' %>
+              <a href="/contacts.html">контакты</a>
             </li>
             <li>
-              <%= link_to "о нас", '/about.html' %>
+              <a href="/about.html">о нас</a>
             </li>
           </ul>
         </div>
-        <!--<div class="fifths-footer-column">-->
-        <!--  <ul class="footer-menu">-->
-        <!--    <li>-->
-        <!--      <%= link_to "контакты", '/contacts.html' %>-->
-        <!--    </li>-->
-        <!--    <li>-->
-        <!--      <%= link_to "о нас", '/about.html' %>-->
-        <!--    </li>-->
-        <!--  </ul>-->
-        <!--</div>-->
+        <div class="fifths-footer-column">
+          <ul class="footer-menu">
+            <li>
+               <a href="/scedule.html">Расписание</a>
+            </li>
+            <li>
+              <a href="/album_gallery.html">Галерея</a>
+            </li>
+          </ul>
+        </div>
         <div class="sixths-footer-column">
           <p>+7 495 <span class="main-phone">784 1416</span></p>
-          <p class="gravpix">by <%= link_to "Gravpix", 'http://gravpix.net/', target: "_blank" %></p>
+          <p class="gravpix">by <a href="http://gravpix.net/" target="_blank">Gravpix</a></p>
         </div>
       </div>
     </footer>
