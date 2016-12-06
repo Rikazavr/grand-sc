@@ -3,7 +3,8 @@
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=1200">
+    <!--<meta name="viewport" content="width=1200">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     
@@ -12,10 +13,12 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title %></title>
     
-    <%= favicon_tag 'images/favicon.ico' %>
+    <!--<%= favicon_tag 'images/favicon.ico' %>-->
     <%= stylesheet_link_tag :site %>
     <%= stylesheet_link_tag :page %>
     <%= stylesheet_link_tag :lightgallery %>
+    <%= stylesheet_link_tag :mobile %>
+    
     <%= javascript_include_tag :all %>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -79,7 +82,33 @@
         </div>
       </div>
       
-
+      <!--mobile menu-->
+      
+      <div class="mobile-menu">
+        <a href="#" id="toggle">МЕНЮ</a>
+        <ul>
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="about.html">О нас</a>
+          </li>
+          <li>
+            <a href="contacts.html">Контакты</a>
+          </li>
+          <li>
+            <a href="/news.html">Новости</a>
+          </li>
+          <li>
+            <a href="/trustees.html">Попечительский совет</a>
+          </li>
+          <li>
+            <a href="/trainers.html">Тренеры</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!--end-->
       
     <%= yield %>
     
@@ -121,9 +150,6 @@
             <li>
               <a href="/trainers.html">тренеры</a>
             </li>
-            <!--<li>-->
-            <!--  <a href="/gallery.html">фотогалерея</a>-->
-            <!--</li>-->
             <li>
               <a href="/contacts.html">контакты</a>
             </li>
@@ -135,16 +161,16 @@
         <div class="fifths-footer-column">
           <ul class="footer-menu">
             <li>
-               <a href="/scedule.html">Расписание</a>
+               <a href="/scedule.html">расписание</a>
             </li>
             <li>
-              <a href="/album_gallery.html">Галерея</a>
+              <a href="/album_gallery.html">галерея</a>
             </li>
           </ul>
         </div>
         <div class="sixths-footer-column">
           <p>+7 495 <span class="main-phone">784 1416</span></p>
-          <p class="gravpix">by <a href="http://gravpix.net/" target="_blank">Gravpix</a></p>
+          <p class="gravpix">Design by <a href="http://gravpix.net/" target="_blank">Gravpix</a></p>
         </div>
       </div>
     </footer>

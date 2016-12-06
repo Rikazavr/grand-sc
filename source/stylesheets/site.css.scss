@@ -161,6 +161,10 @@ header{
 
 // =========================== Menu
 
+.mobile-menu{
+  display: none;
+}
+
 .main-menu{
   background-color: $mainred;
 }
@@ -300,6 +304,8 @@ footer{
 
 // =========================== Index
 
+.mobile-title{display:none;}
+
 .ribbon{
   height: 700px;
   width: 100%;
@@ -427,25 +433,27 @@ footer{
     padding-left: 24px;
   }
   li {
-    color: $mainred;
+    // color: $mainred;
     padding-top: 1em;
   }
   span {
-    color: $mainred;
+    // color: $mainred;
     font-size: 20px;
   }
 }
 
 .index-about-left,
-.index-about-right {
+.index-about-right{
   position: relative;
   width: 50%;
   -webkit-flex: 1 auto;
-  flex: 1 auto; }
-  .index-about-left li,
-  .index-about-right li {
-    color: #474747;
+  flex: 1 auto;
 }
+
+// .index-about-left li,
+// .index-about-right li{
+//   color: #474747;
+// }
 
 .index-about-left{ padding-right: 70px; }
 
@@ -580,81 +588,6 @@ footer{
 
 /*-----------------bionocopy gallery-----------------*/
 
-/* shit
-.small {
-  font-size: 11px;
-  color: #999;
-  display: block;
-  margin-top: -10px; }
-
-.cont {
-  text-align: center; } 
-
-.page-head {
-  padding: 60px 0;
-  text-align: center; }
-
-.page-head .lead {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.4;
-  margin-bottom: 50px;
-  margin-top: 0; } 
-
-.btn {
-  -moz-user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 2px;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.42857;
-  margin-bottom: 0;
-  padding: 6px 12px;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-decoration: none; } 
-
-.btn-lg {
-  border-radius: 2px;
-  font-size: 18px;
-  line-height: 1.33333;
-  padding: 10px 16px; }
-
-.btn-primary:hover {
-  background-color: #fff;
-  color: #152836; }
-
-.btn-primary {
-  background-color: #152836;
-  border-color: #0e1a24;
-  color: #ffffff; } 
-
-.btn-primary {
-  border-color: #eeeeee;
-  color: #eeeeee;
-  -webkit-transition: color 0.1s ease 0s, background-color 0.15s ease 0s;
-  transition: color 0.1s ease 0s, background-color 0.15s ease 0s; }
-
-.page-head h1 {
-  font-size: 42px;
-  margin: 0 0 20px;
-  color: #FFF;
-  position: relative;
-  display: inline-block; }
-
-.page-head h1 .version {
-  bottom: 0;
-  color: #ddd;
-  font-size: 11px;
-  font-style: italic;
-  position: absolute;
-  width: 58px;
-  right: -58px; } */
-
 .demo-gallery > ul {
   margin-bottom: 0;
   padding-left: 15px; 
@@ -685,22 +618,7 @@ footer{
   transition: transform 0.15s ease 0s, -webkit-transform 0.15s ease 0s;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
-
-  /*height: 250px;*/
 }
-
-/*.demo-gallery img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: inherit;
-  }*/
 
 .demo-gallery > ul > li a:hover > img {
   -webkit-transform: scale3d(1.1, 1.1, 1.1);

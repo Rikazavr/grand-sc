@@ -1,5 +1,13 @@
 jQuery(document).ready(function($){
 	
+	// mobile menu
+	
+	$('.mobile-menu a#toggle').click(function(e) {
+	    $('ul').slideToggle(200, function() {
+            // Animation complete.
+        });
+	});
+	
     //открытие модального окна
 	$('.open_modal, .registration-button, .standart-page-reg-button, .corner-registration-button').click(function (e){
 		e.preventDefault();
@@ -38,5 +46,6 @@ jQuery(document).ready(function($){
         
         return false;
     });
+    
 });
 

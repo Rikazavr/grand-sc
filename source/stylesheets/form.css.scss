@@ -51,24 +51,24 @@ $coldgray: #edf6fe;
     transition: opacity .5s, top .5s;
 }
 
-.popup2{
-    opacity: 0;
-    display: none;
-    position: fixed;
-    width: 1030px;
-    top: 20%;
-    left: 50%;
-    margin-left: -515px;
-    z-index: 999999;
-    background: #fff;
-    border: 1px solid #fff;
-    transition: opacity .5s, top .5s;
-}
+// .popup2{
+//     opacity: 0;
+//     display: none;
+//     position: fixed;
+//     width: 1030px;
+//     top: 20%;
+//     left: 50%;
+//     margin-left: -515px;
+//     z-index: 999999;
+//     background: #fff;
+//     border: 1px solid #fff;
+//     transition: opacity .5s, top .5s;
+// }
 
-.popup2message{
-    padding: 45px;
-    font-size: 20px;
-}
+// .popup2message{
+//     padding: 45px;
+//     font-size: 20px;
+// }
 
 .form-header{
     position: relative;
